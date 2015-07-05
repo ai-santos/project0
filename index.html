@@ -16,49 +16,24 @@
 
 </head>
 <body>
-  <div class="row">
-    <div class="jumbotron">
-  <div class="col-md-4">.col-md-4</div>
-  <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
-</div>
-</div>
-<div class="row">
-  <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
-  <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
-</div>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
-</div>
   <div class="container">
     <div class="row">
-      <div class="col-md-9 col-md-offset-1">
-        <div class="jumbotron">
-          <h4>About Me</h4>
-          hello, how are you... everything is good blah blah blah blah
-
-
       <div class="col-md-8 col">
-        <div class="jumbotron">
-          <h2>Justice For Us</h2>
-          <article>
-          <p>
-            <h5>Hey there, my name is Aileen. I work at the ACLU as a junior web developer. I recently met Davina at the Allied Media Conference, an event that brings together activists from all over the United States to share tools and tactics for transforming our communities through media based organizing. After meeting Davina, I wanted to connect with her to work on similar projects and tap into her list of contacts. The distance, schedules, and resources made it hard to connect in person or by phone. So we had the idea of building a social networking site for activists like us.</h5></p></article>
-          
+          <div class="jumbotron">
+          <h2>Justice for Us</h2>
+          Hey there, my name is Aileen. I work at the ACLU as a junior web developer. I recently met Davina at the Allied Media Conference, an event that brings together activists from all over the United States to share tools and tactics for transforming our communities through media based organizing. After meeting Davina, I wanted to connect with her to work on similar projects we are working on and tap into her list of contacts. The challenge of our schedules, locations, and resources led us to create Justice for Us - a microblog.
           <hr>
           <form id="new_to_do_list">
            <div class="form-group">
-              <input class="form-control" id="task-name" placeholder="What will you do tomorrow?" autofocus>
-            </div> 
-             <div class="form-group">
-              <input class="form-control" id="task-desc" placeholder="Describe your task." autofocus>
-            </div> 
+              <textarea class="form-control" id="task-name" placeholder="Type your post here" rows="5"></textarea>
+
             <div class="form-group">
-              <input type="submit" class="btn btn-success" value="Add to list!">
-            </div>
+              <input type="submit" id="Savebutton" class="btn btn-success" value="Save Post">
+            <br><br>
           </form>
           <hr>
-        </div>
-        <h4>Things to be Done</h4>
+        
+        <h4>Blog Post</h4>
         <ul id="task-list">
         <!--   <li class="task">Clean Up</li>
           <li class="task">Read</li>
@@ -68,10 +43,38 @@
           <li class="task">Listen to music</li> -->
 
         </ul>
+
+        <!-- Button trigger modal -->
+        <button type="button" id="hover-button" class="btn btn-primary btn-md">
+          Make a Comment
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        </div> 
+        </div> 
+        </div>
+        </div>
       </div>
       </div>
     </div>
-  </div>
 
 <!-- jquery -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>

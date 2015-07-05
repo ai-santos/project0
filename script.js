@@ -1,5 +1,8 @@
-$(function() {
+$("#hover-button").on("mouseenter", function() {
+  $("#myModal").modal("show");
+  });
 
+$(function() {
 
  //create new todo object from form data
   var toDoTask = $("#task-name").val();
@@ -21,7 +24,6 @@ var toDoItems = [
 _.each(toDoItems, function (item, index) {
   console.log(item);
   var itemView = $(templatingFunction(item));
-  //$pet.attr('data-index', index);
   tasklist.append(itemView);
   console.log(itemView);
 });
@@ -50,6 +52,8 @@ $taskUL.on("click", ".task", function(event) {
   $(this).addClass("done");
 
 });
+
+
 
 
 

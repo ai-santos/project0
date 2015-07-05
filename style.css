@@ -2,8 +2,8 @@
   line-color = red;
   text-decoration: line-through;
 }
-h2 {
-    font-size: 38px;
+h1 {
+    font-size: 20px;
 }
 h5 {
     font-size: 18px;
@@ -15,8 +15,13 @@ article {
     padding: 2px;
     margin: 0 auto;
 }
-
 body {
-  background-image: url("http://static.tumblr.com/fftf9xi/K0Hl5z390/bg_wood.jpg");
+  background-image: url("http://www.freedomarchives.org/images/montage_white.jpg");
   color: black;
+  background-size: cover;
 } 
+#Savebutton {
+  margin:0 auto; }
+
+
+}
