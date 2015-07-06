@@ -21,11 +21,14 @@
       <div class="col-md-8 col">
           <div class="jumbotron">
           <h2>Justice for Us</h2>
-          Hey there, my name is Aileen. I work at the ACLU as a junior web developer. I recently met Davina at the Allied Media Conference, an event that brings together activists from all over the United States to share tools and tactics for transforming our communities through media based organizing. After meeting Davina, I wanted to connect with her to work on similar projects we are working on and tap into her list of contacts. The challenge of our schedules, locations, and resources led us to create Justice for Us - a microblog.
+          <p><h4>
+          Hey there, my name is Aileen. I work at the ACLU as a junior web developer. I recently met Davina at the Allied Media Conference, an event that brings together activists from all over the United States to share tools and tactics for transforming our communities through media based organizing. After meeting Davina, I wanted to connect with her to work on similar projects and tap into her list of contacts and resources. The challenge of our schedules, locations, and resources led us to create Justice for Us - a microblog.
+          </h4>
+        </p>
           <hr>
           <form id="new_to_do_list">
            <div class="form-group">
-              <textarea class="form-control" id="task-name" placeholder="Type your post here" rows="5"></textarea>
+              <textarea class="form-control" id="blog-post" placeholder="Type your post here" rows="5"></textarea>
 
             <div class="form-group">
               <input type="submit" id="Savebutton" class="btn btn-success" value="Save Post">
@@ -33,48 +36,28 @@
           </form>
           <hr>
         
-        <h4>Blog Post</h4>
-        <ul id="task-list">
+        <h4>Blog Post Archives</h4>
+        <article id="old-blog-posts">
         <!--   <li class="task">Clean Up</li>
-          <li class="task">Read</li>
-          <li class="task">Study Programming</li>
-          <li class="task">Go Shopping</li>
-          <li class="task">Watch anime</li>
-          <li class="task">Listen to music</li> -->
+          <p class="blog">DirectAction at Market and Castro</li>
+          <p class="task">Direct </li>
+          <p class="task">Go Shopping</li>
+          <p class="task">Watch anime</li>
+          <p class="task">Listen to music</li> -->
 
-        </ul>
+        </article>
 
-        <!-- Button trigger modal -->
-        <button type="button" id="hover-button" class="btn btn-primary btn-md">
-          Make a Comment
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="form-group">
+              <textarea class="form-control" id="blog-comment" placeholder="Write Your Comments Here" rows="2"></textarea>
+            <input type="submit" id="Savebutton" class="btn btn-success" value="Save Comment">
         
-        </div> 
-        </div> 
-        </div>
-        </div>
-      </div>
-      </div>
-    </div>
+      </div> 
+    </div> 
+  </div>
+</div>
+</div>
+</div>
+</div>
 
 <!-- jquery -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -86,10 +69,10 @@
   <script type="text/javascript" src="script.js"></script>
 
     <!-- underscore template -->
-  <script type="text/template" id="task-list-template">
-    <div class="task">
+  <script type="text/template" id="old-blog-posts-template">
+    <div class="blog">
       <p>
-        <%= todo %> - <%= description %>
+        <%= blog %> - <%= comment %>
       </p>
       <hr>
     </div>   

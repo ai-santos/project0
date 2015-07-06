@@ -1,51 +1,53 @@
-$("#hover-button").on("mouseenter", function() {
+
+  $("#hover-button").on("mouseenter", function() {
   $("#myModal").modal("show");
   });
 
+
 $(function() {
 
- //create new todo object from form data
-  var toDoTask = $("#task-name").val();
-  var toDoDesc = $("#task-desc").val();
-  var toDoData = {name: toDoTask, description: toDoDesc}
+ //create new blog post object and comments from form data
+  var newBlogPost = $("#blog-post").val();
+  var newComment = $("#blog-comment").val();
+  var blogData = {name: newBlogPost, description: newComment}
 
-  var newToDoList = $("#new_to_do_list");
+  var newBlogPost = $("#new_blog_post");
   var newItemForm = $("#new_task");
-  var tasklist = $("#task-list");
+  var blogPosts = $("#old-blog-posts");
 
-var templatingFunction = _.template($('#task-list-template').html());
+var templatingFunction = _.template($('#old-blog-posts-template').html());
 
-var toDoItems = [
-  {todo: "Clean Up", description: "vacuum"},
-  {todo: "Read", description: "Underscore Docs"},
-  {todo: "Study", description: "Homework"}
+var blogItems = [
+  {blog: "Last night, I spent an amazing time watching fireworks on a rooftop in downtown Oakland.", comment: "vacuum"},
+  {blog: "Read",     comment: "Underscore Docs"},
+  {blog: "Study",    comment: "Homework"}
 ];
 
-_.each(toDoItems, function (item, index) {
+_.each(blogItems, function (item, index) {
   console.log(item);
   var itemView = $(templatingFunction(item));
-  tasklist.append(itemView);
+  blogPosts.append(itemView);
   console.log(itemView);
 });
 
-  newToDoList.on("submit", function(event) {
+  newBlogPost.on("submit", function(event) {
     event.preventDefault();
-    toDoTask = $("#task-name").val();
-    toDoDesc = $("#task-desc").val();
+    newBlogPost = $("#blog-post").val();
+    newComment = $("#blog-comment").val();
     console.log('form submitted!');
-    console.log(toDoTask + ' ' + toDoDesc);
+    console.log(newBlogPost + ' ' + newComment);
      
  
-tasklist.append('<li class="task">' + toDoTask + '  ' + toDoDesc + '</li>');
+blogPosts.append('<p class="blog">' + newBlogPost + '  ' + newComment + '</p>');
 
    });
 });
 
 
 //add a click event handler to mark task done
- var $taskUL = $("#task-list");
+ var $blogarticle = $("#old-blog-posts");
 
-$taskUL.on("click", ".task", function(event) {
+$blogarticle.on("click", ".task", function(event) {
   console.log(this); 
   console.log($("this"));
   $(this).children().addClass("done");
