@@ -20,8 +20,17 @@ body {
   color: black;
   background-size: cover;
 } 
+@media (max-width: 500px) {
+      body {
+        background: red;
+    }
+  }
 #Savebutton {
-  margin:0 auto; }
+  margin:0 auto; 
+}
 
+#blog-comment {
+  color: blue;
 
 }
+

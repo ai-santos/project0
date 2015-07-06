@@ -18,9 +18,9 @@ $(function() {
 var templatingFunction = _.template($('#old-blog-posts-template').html());
 
 var blogItems = [
-  {blog: "Last night, I spent an amazing time watching fireworks on a rooftop in downtown Oakland with my beautiful queer community.", comment: "Those sparklers made the night shine!"},
-  {blog: "Read",     comment: "Underscore Docs"},
-  {blog: "Study",    comment: "Homework"}
+  {blog: "July 4th: I spent an amazing time watching fireworks on a rooftop in downtown Oakland with amazing queer activists.", comment: "'Those sparklers made the night shine! -Francois'"},
+  {blog: "July 3rd: I soaked in the sun, water, laughter and delicous treats along the Russian River!" ,     comment: "'Best summer. ever. epic. - Maria'"},
+  {blog: "July 2nd: I learned so much about OOP today, it is blowing my mind!",    comment: "'Who's Down with OOP?' - Anonymous'"}
 ];
 
 _.each(blogItems, function (item, index) {
