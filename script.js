@@ -18,7 +18,7 @@ $(function() {
 var templatingFunction = _.template($('#old-blog-posts-template').html());
 
 var blogItems = [
-  {blog: "Last night, I spent an amazing time watching fireworks on a rooftop in downtown Oakland.", comment: "vacuum"},
+  {blog: "Last night, I spent an amazing time watching fireworks on a rooftop in downtown Oakland with my beautiful queer community.", comment: "Those sparklers made the night shine!"},
   {blog: "Read",     comment: "Underscore Docs"},
   {blog: "Study",    comment: "Homework"}
 ];
